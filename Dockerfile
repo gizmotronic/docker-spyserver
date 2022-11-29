@@ -41,4 +41,4 @@ RUN apt-get update \
 # Copy root filesystem from build stage
 COPY --from=build /buildroot /
 
-CMD [ "/bin/entrypoint.sh", "/config/spyserver.config" ]
+CMD [ "/entrypoint.sh", "/config/spyserver.config" ]
