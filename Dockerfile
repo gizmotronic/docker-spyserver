@@ -36,7 +36,11 @@ LABEL maintainer="gizmotronic@gmail.com"
 RUN apt-get update \
  && apt-get install -y \
         rtl-sdr \
-        librtlsdr-dev
+        librtlsdr-dev \
+        airspy \
+        libairspy-dev \
+        libairspyhf-dev \
+ && apt-get clean
 
 # Copy root filesystem from build stage
 COPY --from=build /buildroot /
